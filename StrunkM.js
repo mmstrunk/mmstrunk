@@ -8,6 +8,14 @@ var myHeroName = "Bruno";
 var castleLocation = "Red Castle";
 var weaponChoice = "Bow";
 
+var floor = 0;
+while (floor < 4) {
+	console.log (" searched " + floor +" and did not find the dragon ");
+	floor++;
+};
+
+console.log ("Found the dragon")
+
 //My outputs
 console.log ("The hero's name is " + myHeroName);
 console.log ("He is trying to slay the dragon and save the princess")
@@ -30,7 +38,9 @@ if (weaponChoice === "Sword") {
     if (weaponChoice === "Bow") 
     console.log("The Dragon was defeated in distant combat")
     console.log("He recieved a kiss from the princess")
- }} 
+ }}
+
+ 
 
 
 
