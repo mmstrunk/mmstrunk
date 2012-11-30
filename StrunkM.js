@@ -29,13 +29,16 @@ console.log ("They found the dragon on the 4th floor!")
 // for-loop
 
 for (var i = 0, j = weaponsChoice.length; i < j; i++){
-	var myHeroName = myHeroNames[i];i++,
-		weaponThisTime = weaponsChoice[i];i++;
+	var myHeroName = myHeroNames[i];
+		weaponThisTime = weaponsChoice[i];
 	
 	
 	console.log(myHeroName + " chose to use the " + weaponThisTime + " as his weapon. ")
 	
 };
+
+
+
 
 
 
