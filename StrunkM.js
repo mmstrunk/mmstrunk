@@ -41,7 +41,13 @@ var weaponsChoice = [
 	"Bow"
 ];
 
-
+// construtor
+var prize = function (amount){
+	return {
+		"amount": amount,
+		"dragonDrop": []
+	};
+};
 // function
 var say = function(message){ console.log(message); 
 	
@@ -68,7 +74,7 @@ var say = function(message){ console.log(message);
 
 // json for-loop
 
-var goneHeros = function (json) {
+var goneHeros = function (JSON) {
 	for (var i = 0; i < json.fallenHeros.length; i++){
 		var deadHero = json.fallenHeros[i];
 		say(" At the age of " + deadHero.age + ", the hero " + deadHero.name + " was slane by the dragon");
@@ -92,6 +98,8 @@ if (Rose.killDragon === true) {
 } else {
 	say("The Dragon slayed Rose")
 };
+
+
  
 
 
