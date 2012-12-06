@@ -10,7 +10,7 @@ var Bruno = {
 	age: "28",
 	height: "Six Foot",
 	catchPrase: "Im here to stay",
-	killDrafon: false
+	killDragon: false
 };
 
 var Axel = {
@@ -43,11 +43,19 @@ var weaponsChoice = [
 
 // construtor
 var prize = function (amount){
+	var dragonDrop = [];
+	var droped = function (item){
+		dragonDrop.push(item);
+	};
 	return {
 		"amount": amount,
-		"dragonDrop": []
+		"fellBehind": dragonDrop,
+		"droped": droped
 	};
 };
+
+var gold = prize("Gold");
+
 // function
 var say = function(message){ console.log(message); 
 	
@@ -99,9 +107,8 @@ if (Rose.killDragon === true) {
 	say("The Dragon slayed Rose")
 };
 
+say("The dragon dropped gold arrows");
 
- 
+gold.droped("gold arrows")
 
-
-
-
+say(gold + " was added to Roses invitory");
