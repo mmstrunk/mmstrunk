@@ -1,7 +1,7 @@
 // Michael Strunk
-// SDI 1211
-// Project 1
-// My first JavaScript
+// SDI 1212
+// Project 2
+// My second JavaScript
 
 
 
