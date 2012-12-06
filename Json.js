@@ -1,6 +1,6 @@
 // My json data
 
-var json = {
+var JSON = {
 	"fallenHeros": [
 		{
 			"Name": "Link",
