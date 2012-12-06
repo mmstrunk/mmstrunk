@@ -9,24 +9,26 @@
 var Bruno = {
 	age: "28",
 	height: "Six Foot",
-	catchPrase: "Im here to stay"
-	
+	catchPrase: "Im here to stay",
+	killDrafon: false
 };
 
 var Axel = {
 	age: "34",
 	height: "Six Two",
-	catchPrase: "Time to die"
+	catchPrase: "Time to die",
+	killDragon: false
 };
 
 var Rose = {
 	age: "24",
 	height: "Five two",
-	catchPrase: "This looks like a job for a girl"
+	catchPrase: "This looks like a job for a girl",
+	killDragon: true
 };
 
 
-// My variables in array
+// My variables
 var myHeroNames = [
 	"Bruno",
 	"Axel",
@@ -38,6 +40,7 @@ var weaponsChoice = [
 	"Sword",
 	"Bow"
 ];
+
 
 // function
 var say = function(message){ console.log(message); 
@@ -72,9 +75,23 @@ var goneHeros = function (json) {
 	};
 };
 
+if (Bruno.killDragon === true) {
+	say("Bruno defeated the dragon!")
+} else {
+	say("The Dragon slayed Bruno")
+};
 
+if (Axel.killDragon === true) {
+	say("Axel defeated the dragon!")
+} else {
+	say("The Dragon slayed Axel")
+};
 
-
+if (Rose.killDragon === true) {
+	say("Rose defeated the dragon!")
+} else {
+	say("The Dragon slayed Rose")
+};
  
 
 
