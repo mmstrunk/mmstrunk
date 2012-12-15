@@ -37,12 +37,19 @@ var StringLibrary = function (str) {
 			};
 			return result;
 			};
-			
+	
+	// Changes the separator to a new given separator ex. a,b,c -> a/b/c
+	var swapSep = function (str,newSep) {
+		var re = /\W/g;
+		return str.replace(re,newSep);
+		};			
+	
 	return {
 		"isPhoneNum" : isPhoneNum,
 		"isEmail" : isEmail,
 		"isUrl" : isUrl,
-		"upperLetter" : upperLetter	
+		"upperLetter" : upperLetter,
+		"swapSep" : swapSep
 	};
 	
 
@@ -53,3 +60,4 @@ console.log(stringLib.isPhoneNum("256-655-0016"));
 console.log(stringLib.isEmail("test@test.com"));
 console.log(stringLib.isUrl("http://test.com"));
 console.log(stringLib.upperLetter("This is a test to see if upper letters work"));
+console.log(stringLib.swapSep("this,is,test","/"));
