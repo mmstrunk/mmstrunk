@@ -26,10 +26,23 @@ var StringLibrary = function (str) {
 		return re.test(str);
 	};				
 	
+	// Capitalize the first letter in each word in string
+	// Returns modified string with the first letter capitalized in each word
+	var upperLetter = function (str) {
+		var split = str.split(" ");
+		var result = "";
+		for (var i = 0, j = split.length; i < j; i++) {
+			var spNew = split[i].replace(split[i].charAt(0),(split[i].charAt(0)).toUpperCase());
+			result = result.concat(spNew + " ");
+			};
+			return result;
+			};
+			
 	return {
-			"isPhoneNum" : isPhoneNum,
-			"isEmail" : isEmail,
-			"isUrl" : isUrl
+		"isPhoneNum" : isPhoneNum,
+		"isEmail" : isEmail,
+		"isUrl" : isUrl,
+		"upperLetter" : upperLetter	
 	};
 	
 
@@ -39,3 +52,4 @@ var stringLib = StringLibrary();
 console.log(stringLib.isPhoneNum("256-655-0016"));
 console.log(stringLib.isEmail("test@test.com"));
 console.log(stringLib.isUrl("http://test.com"));
+console.log(stringLib.upperLetter("This is a test to see if upper letters work"));
