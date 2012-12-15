@@ -12,12 +12,21 @@ var StringLibrary = function (str) {
 		return re.test(str);
 		};
 	
+	// Checks for a valid email 
+	// Returns boolean
+	var isEmail = function (str) {
+		var re = /^\w+@[\w.\-]+\.[A-Za-z]{2,3}$/;
+		return re.test(str);
+		};
+	
 	return {
-			"isPhoneNum" : isPhoneNum
+			"isPhoneNum" : isPhoneNum,
+			"isEmail" : isEmail
 	};
 			
 };
 
-
 var stringLib = StringLibrary();
-console.log(stringLib.isPhoneNum("941-244-0011"));
+console.log(stringLib.isPhoneNum("256-655-0016"));
+console.log(stringLib.isEmail("test@test.com"));
+
