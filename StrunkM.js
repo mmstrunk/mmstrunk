@@ -42,7 +42,7 @@ var StringLibrary = function (str) {
 	var swapSep = function (str,newSep) {
 		var re = /\W/g;
 		return str.replace(re,newSep);
-		};			
+	};			
 	
 	return {
 		"isPhoneNum" : isPhoneNum,
@@ -55,9 +55,38 @@ var StringLibrary = function (str) {
 
 };
 
+// Testing String
+
 var stringLib = StringLibrary();
 console.log(stringLib.isPhoneNum("256-655-0016"));
 console.log(stringLib.isEmail("test@test.com"));
 console.log(stringLib.isUrl("http://test.com"));
 console.log(stringLib.upperLetter("This is a test to see if upper letters work"));
 console.log(stringLib.swapSep("this,is,test","/"));
+
+// Number Library
+
+var NumberLibrary = function () {
+	
+	// Change a number to use a specific amount of decimal places
+	var formatNum = function (num,afterDecimal) {
+        return Number(num.toFixed(afterDecimal));
+    };
+    
+    // Changes a string value to a integer value
+    var stringToNum = function (num) {
+	    return Number(num);
+    };
+
+
+    return {
+	    "formatNum" : formatNum,
+	    "stringToNum" : stringToNum
+	};    
+};
+
+// Testing Number
+
+var numberLib = NumberLibrary();
+console.log(numberLib.formatNum(3.443,2));
+console.log(numberLib.stringToNum("456"));
