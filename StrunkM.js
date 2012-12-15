@@ -19,14 +19,23 @@ var StringLibrary = function (str) {
 		return re.test(str);
 		};
 	
+	// Checks for a valid URL
+	// Returns boolean
+	var isUrl = function (str) {
+		var re = /^(?:http|https):/;
+		return re.test(str);
+	};				
+	
 	return {
 			"isPhoneNum" : isPhoneNum,
-			"isEmail" : isEmail
+			"isEmail" : isEmail,
+			"isUrl" : isUrl
 	};
-			
+	
+
 };
 
 var stringLib = StringLibrary();
 console.log(stringLib.isPhoneNum("256-655-0016"));
 console.log(stringLib.isEmail("test@test.com"));
-
+console.log(stringLib.isUrl("http://test.com"));
